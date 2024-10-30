@@ -41,13 +41,16 @@ if type_money == "lek":
 again = input("Would you like to convert again : ")
 if again == "Yes" or again == "yes" :
     print("--------------------------------------------------")
-    type_money = input("What would you like to convert it to ")
-    print("---------------------------------------------------")
+
+   
 
     x=1
 if again == "No" or again == "no" :
         x=2
-while x == 1:
+while x == 1:    
+    dollar_amount=float(input("Enter dollar amount to be converted : $"))
+    print("-----------------------------------------------------------")
+    type_money = input("What would you like to convert it to ")
     print("---------------------------------------")
     if type_money == "ruppees":
         print("Amount of " + type_money +" :"  +str(ruppees))
@@ -72,21 +75,12 @@ while x == 1:
     if type_money == "lek":
         print("Amount of " + type_money +" :"  +str(lek))
         print("-------------------------------------------")
+        again = input("Would you like to convert again : ")
 
-    again = input("Would you like to convert again : ")
     if again == "Yes" or again == "yes" :
         x=1
     if again == "No" or again == "no" :
         x=2
-    dollar_amount=float(input("Enter dollar amount to be converted : $"))
     print("-----------------------------------------------------------")
-    type_money = input("What would you like to convert it to (type options to see the options) ")
-    while type_money == "options":
-        if type_money == "options":
-            print("---------------------------------------------------------------------------")
-            print("euros, ruppees, afghani, pounds, and lek")
-            print("---------------------------------------")
-            type_money = input("What would you like to convert it to (type options to see the options) ")
-
 
 print("Program finished")
